@@ -1,20 +1,32 @@
 # 📘 Blog Application (Prisma + Node.js)
 
-A full-stack **Blog Application** built with **Node.js, Express, Prisma ORM, and PostgreSQL**.  
-This project focuses on **clean backend architecture**, **scalable database design**, and **modern ORM practices** using Prisma.
+A full-stack **Blog Application** built with **Node.js, Express, Prisma ORM, and PostgreSQL**.
+
+This project focuses on:
+- Clean backend architecture  
+- Scalable database design  
+- Modern, type-safe ORM practices using **Prisma**
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **User Authentication & Authorization**
-- 📝 **Create, Read, Update, Delete (CRUD) Blogs**
-- 💬 **Comment System** (Nested Comments Supported)
-- 👤 **User Roles** (Admin / User)
-- 🧾 **Prisma ORM** with Type-Safe Queries
+- 🔐 **JWT-based Authentication & Authorization**
+- 📝 **Create, Read, Update, and Delete (CRUD) Blog Posts**
+- 💬 **Comment System**
+  - Supports **nested comments**
+- 👤 **User Roles**
+  - Admin
+  - User
+- 🔑 **Protected Routes**
+- 🧾 **Prisma ORM**
+  - Type-safe queries
 - 🗄️ **PostgreSQL Database**
-- ⏱️ **Auto** `createdAt` & `updatedAt`
-- 📦 **Clean MVC / Controller-based Structure**
+- ⏱️ **Automatic timestamps**
+  - `createdAt`
+  - `updatedAt`
+- 📦 **Clean controller-based architecture**
+  - MVC-inspired structure
 
 ---
 
@@ -27,7 +39,7 @@ This project focuses on **clean backend architecture**, **scalable database desi
 - PostgreSQL
 - JWT Authentication
 
-### Tools
+### Tools & Libraries
 - Prisma Studio
 - dotenv
 - bcrypt
@@ -36,15 +48,14 @@ This project focuses on **clean backend architecture**, **scalable database desi
 
 ## 📌 Project Goal
 
-To build a **scalable and maintainable backend** using Prisma ORM  
-and follow **industry-standard backend practices**.
+To build a **scalable, secure, and maintainable backend** using Prisma ORM  
+while following **industry-standard backend development practices**.
 
 ---
 
-## ⭐ Notes
+## 🧪 How to Run Locally
 
-- Prisma provides **type safety** and **clean database access**
-- Easy to extend with **roles, permissions, and relations**
-- Beginner-friendly but **production-ready structure**
-
----
+### 1️⃣ Clone the repository
+```bash
+git clone <repository-url>
+cd blog-application
