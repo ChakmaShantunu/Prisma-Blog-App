@@ -46,13 +46,17 @@ export const auth = betterAuth({
     emailVerification: {
         sendVerificationEmail: async ({ user, url, token }, request) => {
             try {
+                console.log({ user, url, token })
+                const verficationUrl = `${process.env.APP_URL}/verify-email`
                 const info = await transporter.sendMail({
                     from: '"Prisma Blog" <chakmashantunu.web@gmail.com>',
                     to: "sunghajung0192581@gmail.com",
-                    subject: "Hello ✔",
+                    subject: "Verify your email – Prisma Blog",
                     text: "Hello world?",
                     html: "<b>Hello world?</b>",
                 });
+
+
 
                 console.log("Email sent:", info.messageId);
             } catch (error) {
