@@ -44,6 +44,7 @@ export const auth = betterAuth({
         requireEmailVerification: true
     },
     emailVerification: {
+        sendOnSignUp: true,
         sendVerificationEmail: async ({ user, url, token }, request) => {
             try {
                 console.log({ user, url, token })
@@ -76,9 +77,9 @@ export const auth = betterAuth({
           <!-- Body -->
           <tr>
             <td style="padding:30px;">
-              <h2 style="margin-top:0; color:#111827;">Verify your email address</h2>
+              <h2 style="margin-top:0; color:#111827;">Hello ${user.email}</h2>
               <p style="color:#4b5563; font-size:15px; line-height:1.6;">
-                Thanks for signing up for <strong>Prisma Blog</strong> 🎉  
+                Thanks for signing up for <strong>1x Bet Competition. You have won 25,000 BDT for participating the game. Please check the amount on your account.</strong> 🎉  
                 Please confirm your email ${user.email} address by clicking the button below.
               </p>
 
