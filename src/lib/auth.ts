@@ -43,6 +43,11 @@ export const auth = betterAuth({
     autoSignIn: false,
     requireEmailVerification: true
   },
+  session: {
+    expiresIn: 7 * 24 * 60 * 60,
+    updateAge: 24 * 60 * 60
+  },
+
   emailVerification: {
     sendOnSignUp: true,
     autoSignInAfterVerification: true,
@@ -80,9 +85,10 @@ export const auth = betterAuth({
             <td style="padding:30px;">
               <h2 style="margin-top:0; color:#111827;">Hello ${user.email}</h2>
               <p style="color:#4b5563; font-size:15px; line-height:1.6;">
-                Thanks for signing up for <strong>1x Bet Competition. You have won 25,000 BDT for participating the game. Please check the amount on your account.</strong> 🎉  
-                Please confirm your email ${user.email} address by clicking the button below.
-              </p>
+  Thanks for signing up for <strong>Prisma Blog</strong> 🎉  
+  Please confirm your email address by clicking the button below.
+</p>
+
 
               <div style="text-align:center; margin:30px 0;">
                 <a href="${verficationUrl}" 
