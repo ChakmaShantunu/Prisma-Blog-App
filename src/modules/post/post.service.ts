@@ -23,6 +23,9 @@ const getAllPost = async (payload: { search?: string }) => {
                 },
             }),
         },
+        orderBy: {
+            createdAt: "desc"
+        }
     });
 
     return result;
