@@ -25,7 +25,8 @@ const getAllPost = async (payload: { search?: string }) => {
         },
         orderBy: {
             createdAt: "desc"
-        }
+        },
+        take: 20
     });
 
     return result;
