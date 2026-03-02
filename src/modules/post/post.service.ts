@@ -14,7 +14,7 @@ const createPost = async (data: Omit<Post, "id" | "createdAt" | "updatedAt" | "a
 const getAllPost = async (payload: { search?: string }) => {
     const { search } = payload;
 
-    const result = await prisma.post.findMany({
+    const posts = await prisma.post.findMany({
         where: {
             ...(search && {
                 title: {
@@ -30,7 +30,7 @@ const getAllPost = async (payload: { search?: string }) => {
         take: 20
     });
 
-    return result;
+    return posts;
 };
 
 export const postService = {
