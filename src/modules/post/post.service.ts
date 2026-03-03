@@ -30,7 +30,10 @@ const getAllPost = async (payload: { search?: string }) => {
         take: 20
     });
 
-    return posts;
+    return {
+        total: posts.length,
+        posts
+    };
 };
 
 export const postService = {
