@@ -17,10 +17,20 @@ const getAllPost = async (payload: { search?: string }) => {
     const posts = await prisma.post.findMany({
         where: {
             ...(search && {
-                title: {
-                    contains: search,
-                    mode: "insensitive",
-                },
+                OR: [
+                    {
+                        title: {
+                            contains: search,
+                            mode: "insensitive",
+                        },
+                    },
+                    {
+                        content: {
+                            contains: search,
+                            mode: "insensitive"
+                        }
+                    }
+                ]
             }),
         },
         orderBy: {
